@@ -1,0 +1,80 @@
+/* style.css (ФИНАЛЬНАЯ ВЕРСИЯ С ЛИПКИМ ЛОГО) */
+
+:root {
+    --bg-color: #121212;
+    --card-color: #1E1E1E;
+    --text-color: #EAEAEA;
+    --text-color-secondary: #8A8A8A;
+    --primary-color: #FF4500;
+    --border-color: #333333;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Липкий контейнер для логотипа --- */
+.sticky-logo-container {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--bg-color);
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    /* Задаем высоту самой шапки */
+    height: 70px; /* Можешь поиграться с этим значением */
+    /* Используем Flexbox для идеального центрирования логотипа */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    /* Логотип будет ВЫШЕ, чем родительский контейнер */
+    height: 180px;  /* Можешь сделать его еще больше, например, 100px */
+    width: auto;
+    /* Убираем любые ограничения по ширине, чтобы он мог быть большим */
+    max-width: none; 
+    display: block;
+}
+
+/* --- Основной контейнер, который скроллится под логотипом --- */
+.app-container {
+    padding: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Шапка теперь просто текстовый блок --- */
+.app-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.app-header p {
+    margin: 0;
+    color: var(--text-color-secondary);
+    font-size: 14px;
+}
+
+/* ... (остальные стили для товаров, кнопок и т.д. остаются БЕЗ ИЗМЕНЕНИЙ) ... */
+.section-subtitle { font-family: 'Bebas Neue', cursive; font-size: 24px; padding: 10px 0; margin-top: 10px; margin-bottom: 15px; color: var(--primary-color); letter-spacing: 1px; text-align: center; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+.product-card { display: flex; align-items: center; gap: 12px; background-color: var(--card-color); border-radius: 12px; padding: 15px; margin-bottom: 15px; cursor: pointer; transition: background-color 0.2s; box-shadow: 0 5px 25px rgba(0,0,0,0.2); }
+.product-card:active { background-color: #252525; }
+.product-card img { width: 50px; height: 50px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
+.product-details { display: flex; flex-direction: column; width: 100%; min-width: 0; flex-grow: 1; text-align: left; }
+.product-title-price { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.product-name { font-weight: 700; font-size: 16px; white-space: normal; }
+.price-wrapper { display: flex; flex-direction: column; align-items: flex-end; white-space: nowrap; flex-shrink: 0; }
+.old-price { font-size: 12px; color: var(--text-color-secondary); text-decoration: line-through; }
+.product-price { font-weight: 700; color: var(--primary-color); font-size: 16px; }
+.product-description { font-size: 14px; color: var(--text-color-secondary); margin-top: 4px; }
+.product-card.is-top .product-name::before { content: '🔥'; margin-right: 6px; }
+.share-card { background: var(--card-color); padding: 20px; border-radius: 12px; text-align: center; margin: 30px 0; }
+.share-card p { margin: 0 0 15px; font-weight: 500; }
+.share-button { padding: 12px 25px; border: 1.5px solid var(--primary-color); border-radius: 8px; background-color: transparent; color: var(--primary-color); font-size: 16px; font-weight: bold; cursor: pointer; }
+.app-footer { text-align: center; padding: 20px 0 10px; font-size: 12px; color: var(--text-color-secondary); }

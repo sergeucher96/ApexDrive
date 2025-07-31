@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>ApexDriver - Автотовары</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ================== НОВАЯ СТРУКТУРА ================== -->
+    <!-- Логотип теперь сам по себе -->
+    <div class="sticky-logo-container">
+        <img class="logo" src="logo.png" alt="ApexDriver Logo">
+    </div>
+
+    <!-- Весь остальной контент -->
+    <div class="app-container">
+        <header class="app-header">
+            <!-- Здесь остался только слоган -->
+            <p>Лучшие товары для твоего авто с достойными скидками</p>
+        </header>
+
+        <main id="products-container">
+            <!-- Все товары и категории будут генерироваться здесь с помощью JS -->
+        </main>
+
+        <div class="share-card">
+            <p>Нравится наш выбор? Посоветуй магазин друзьям!</p>
+            <button id="share-btn" class="share-button">🚀 Поделиться с другом</button>
+        </div>
+
+        <footer class="app-footer">
+            <p>© 2024 ApexDriver</p>
+        </footer>
+    </div>
+    <!-- =============================================== -->
+    
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
