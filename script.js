@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Обработчик для кнопки "Поделиться" ---
     if (shareBtn) {
         shareBtn.addEventListener('click', () => {
-            const botUsername = 'ApexDriver_Bot'; // Замените на юзернейм вашего бота
+            const botUsername = 'ApexDrive_Bot'; // Замените на юзернейм вашего бота
             const shareText = `Привет! 👋 Нашел крутой магазин автотоваров прямо в Telegram. Удобный каталог, лучшие цены. Зацени! 👉 @${botUsername}`;
             const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(`https://t.me/${botUsername}`)}&text=${encodeURIComponent(shareText)}`;
             tg.openTelegramLink(shareUrl);
